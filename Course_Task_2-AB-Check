@@ -1,4 +1,4 @@
-public class Course_Task_2-AB-Check {
+public class Course_Task_2_AB_Check {
     public static void main(String[] args){
             
         System.out.println(ABCheck("Laura sobs"));

@@ -1,0 +1,28 @@
+public class Course_Task_1-ExOh {
+    public static void main(String[] args) {
+        
+        System.out.println(checkOX("sss"));
+        System.out.println(checkOX("oxoxoxox"));
+        System.out.println(checkOX("ooOxxxoooxxn"));
+        
+    }
+    private static boolean checkOX(String s){
+        s = s.toLowerCase();
+        
+        int ocount = 0;
+        int xcount = 0;
+        
+        for(int i=0; i<s.length(); i++){
+            if(s.charAt(i)=='o'){
+                ocount++;
+            }
+            
+            if(s.charAt(i)=='x'){
+                xcount++;
+            }
+        }
+        return xcount==ocount;
+    }
+    
+}
+

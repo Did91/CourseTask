@@ -1,27 +1,2 @@
-public class Course_Task_1_ExOh {
-    public static void main(String[] args) {
-        
-        System.out.println(ExOh("oxoxoxox"));
-        System.out.println(ExOh("ooOxxxoooxx"));
-        
-    }
-    private static boolean ExOh(String s){
-        s = s.toLowerCase();
-        
-        int ocount = 0;
-        int xcount = 0;
-        
-        for(int i=0; i<s.length(); i++){
-            if(s.charAt(i)=='o'){
-                ocount++;
-            }
-            
-            if(s.charAt(i)=='x'){
-                xcount++;
-            }
-        }
-        return xcount==ocount;
-    }
-    
-}
+
 

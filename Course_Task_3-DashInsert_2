@@ -1,1 +1,55 @@
+public class Course_Task_3_DashInsert_2 {
+    public static void main(String[] args){
+        
+        System.out.println(dashInsert(99941));
+        System.out.println(dashInsert(56730));
+        System.out.println(dashInsert(123456));
+        System.out.println(dashInsert(1135833));
+        
+    }
+    public static String dashInsert(int number){
+        StringBuilder numberString = new StringBuilder();
+        
+        boolean hasDigit1 = true;
+        boolean hasDigit2 = true;
+        int n1 = number;
+        int n21 = number;
+        int n22 = number;
+        int size = 0;
+        int count = 0;
+        
+        // counting digits
+        while(hasDigit1){
+            size++;
+            n1 = n1/10;
+            if(n1==0){
+                hasDigit1 = false;            
+            }
+        }
+        
+        int[] arrayInt = new int[size];
+        
+        // adding digits to array of integers
+        while(hasDigit2){
+            count++;
+            n21 = n22%10;
+            n22 = n22/10;
+            arrayInt[size - count] = n21;
+            if(n22==0){
+                hasDigit2 = false;
+            }
+        }
+        //checking for neighboring odd numbers and adding them to string 
+        for(int i=0; i<size-1; i++){
+            numberString.append(arrayInt[i]);
+            if(arrayInt[i]%2==1 && arrayInt[i+1]%2==1){
+                numberString.append("-");
+            }
+            
+        }
+        numberString.append(arrayInt[size-1]);
+        return numberString.toString();
+    }
+    
+}
 
